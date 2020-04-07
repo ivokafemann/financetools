@@ -1,7 +1,7 @@
 """
 A small tool to calculate the value of an investment in the future.
 
-Asks the user how much money, at which interest rate he wants to invest.
+Asks the user how much money and at what interest rate he wants to invest.
 
 Args:
     (int) I - value of initial investment
