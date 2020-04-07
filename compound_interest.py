@@ -21,3 +21,11 @@ def terminal_value(I,r,t):
     return T
 
 print('\nThe value of your investment after {} year(s) at an interest rate of {}% is: {}'.format(t,r,terminal_value(I,r,t)))
+
+
+def annuity(I,r,t):
+    A = [terminal_value(I,r,x) for x in range(t)]
+
+    return A
+
+print('\nThe annuity for each year is shown in the following list:\n',annuity(I,r,t))
