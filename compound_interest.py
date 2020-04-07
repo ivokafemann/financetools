@@ -15,9 +15,9 @@ I = int(input('\nHow much money would you like to invest?\n'))
 r = int(input('\nWhat is the interest rate (write only 5 for an interest rate 5 %) for the investment?\n'))
 t = int(input('\nWhat is the time horizon in years for the investment?\n'))
 
-def compound_interest(I,r,t):
-    A = I * (1 + r/100)**t
+def terminal_value(I,r,t):
+    T = I * (1 + r/100)**t
 
-    return A
+    return T
 
-print('\nThe value of your investment after {} year(s) at an interest rate of {}% is: {}'.format(t,r,compound_interest(I,r,t)))
+print('\nThe value of your investment after {} year(s) at an interest rate of {}% is: {}'.format(t,r,terminal_value(I,r,t)))
