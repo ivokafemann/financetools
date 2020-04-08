@@ -26,3 +26,5 @@ def annuity(I,r,T):
     return A
 
 print('\nThe annuity for each year is shown in the following list:\n',annuity(I,r,T))
+
+t = list(range(T))
