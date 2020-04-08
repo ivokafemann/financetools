@@ -15,12 +15,14 @@ I = int(input('\nHow much money would you like to invest?\n'))
 r = int(input('\nWhat is the interest rate (write only 5 for an interest rate 5 %) for the investment?\n'))
 T = int(input('\nWhat is the time horizon in years for the investment?\n'))
 
+#Terminal Value Function
 def terminal_value(I,r,T):
     T0 = I * (1 + r/100)**T
     return T0
 
 print('\nThe value of your investment after {} year(s) at an interest rate of {}% is: {}'.format(T,r,terminal_value(I,r,T)))
 
+#Annuity Function
 def annuity(I,r,T):
     A = [terminal_value(I,r,x) for x in range(T)]
     return A
@@ -29,6 +31,7 @@ print('\nThe annuity for each year is shown in the following list:\n',annuity(I,
 
 t = list(range(T))
 
+#Plot the annuity over the time horizon T
 import matplotlib.pyplot as plt
 plt.plot(t,annuity(I,r,T))
 plt.xlabel("t")
