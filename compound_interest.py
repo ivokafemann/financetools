@@ -28,3 +28,10 @@ def annuity(I,r,T):
 print('\nThe annuity for each year is shown in the following list:\n',annuity(I,r,T))
 
 t = list(range(T))
+
+import matplotlib.pyplot as plt
+plt.plot(t,annuity(I,r,T))
+plt.xlabel("t")
+plt.ylabel("Value")
+plt.title("Compound Interest")
+plt.show()
