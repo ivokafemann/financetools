@@ -6,26 +6,23 @@ Asks the user how much money and at what interest rate he wants to invest.
 Args:
     (int) I - value of initial investment
     (int) r - interest rate
-    (int) t - time in years
+    (int) T - time in years
 Returns:
     (int) A - Value of investment in the future
 """
 
 I = int(input('\nHow much money would you like to invest?\n'))
 r = int(input('\nWhat is the interest rate (write only 5 for an interest rate 5 %) for the investment?\n'))
-t = int(input('\nWhat is the time horizon in years for the investment?\n'))
+T = int(input('\nWhat is the time horizon in years for the investment?\n'))
 
-def terminal_value(I,r,t):
-    T = I * (1 + r/100)**t
+def terminal_value(I,r,T):
+    T0 = I * (1 + r/100)**T
+    return T0
 
-    return T
+print('\nThe value of your investment after {} year(s) at an interest rate of {}% is: {}'.format(T,r,terminal_value(I,r,T)))
 
-print('\nThe value of your investment after {} year(s) at an interest rate of {}% is: {}'.format(t,r,terminal_value(I,r,t)))
-
-
-def annuity(I,r,t):
-    A = [terminal_value(I,r,x) for x in range(t)]
-
+def annuity(I,r,T):
+    A = [terminal_value(I,r,x) for x in range(T)]
     return A
 
-print('\nThe annuity for each year is shown in the following list:\n',annuity(I,r,t))
+print('\nThe annuity for each year is shown in the following list:\n',annuity(I,r,T))
