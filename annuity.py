@@ -28,14 +28,14 @@ def annuities(I,r,T):
     return A
 
 print('\nThe annuity for each year is shown in the following list:\n',annuities(I,r,T))
-print('\nThe following graph plots the annuties over the given time horizon T\n')
+print('\nThe following graph plots the annuities over the given time horizon T\n')
 
 t = list(range(T))
 
-#Plot the annuity over the time horizon T
+#Plot the annuities over the time horizon T
 import matplotlib.pyplot as plt
-plt.plot(t,annuity(I,r,T))
+plt.plot(t,annuities(I,r,T))
 plt.xlabel("t")
 plt.ylabel("Value")
-plt.title("Compound Interest")
+plt.title("Annuities")
 plt.show()
