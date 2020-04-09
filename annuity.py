@@ -20,7 +20,7 @@ def annuity(I,r,t):
     A = I * (1 + r/100)**t
     return A
 
-print('\nThe value of your investment after {} year(s) at an interest rate of {}% is: {}'.format(T,r,terminal_value(I,r,T)))
+print('\nThe value of your investment after {} year(s) at an interest rate of {}% is: {}'.format(T,r,annuity(I,r,T)))
 
 #Annuity Function
 def annuity(I,r,T):
