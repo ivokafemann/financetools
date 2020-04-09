@@ -28,6 +28,7 @@ def annuities(I,r,T):
     return A
 
 print('\nThe annuity for each year is shown in the following list:\n',annuities(I,r,T))
+print('\nThe following graph plots the annuties over the given time horizon T\n')
 
 t = list(range(T))
 
