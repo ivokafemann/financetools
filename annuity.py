@@ -22,9 +22,9 @@ def annuity(I,r,t):
 
 print('\nThe value of your investment after {} year(s) at an interest rate of {}% is: {}'.format(T,r,annuity(I,r,T)))
 
-#Annuity Function
-def annuity(I,r,T):
-    A = [terminal_value(I,r,x) for x in range(T)]
+#Create a list of annuities with the Annuities Function
+def annuities(I,r,T):
+    A = [annuity(I,r,x) for x in range(T)]
     return A
 
 print('\nThe annuity for each year is shown in the following list:\n',annuity(I,r,T))
