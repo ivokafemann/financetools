@@ -8,8 +8,8 @@ Finance Tools in Python
 The project's goal is to build a couple of basic finance tools in Python
 in order to get a better understanding of Python and the usage of Git as well as GitHub.
 
-interest.py - a small program to calculate the compound interests of an investment P over a given time horizon t.
-interests.py - a small program to calculate the compound interests of an investment P over a given time horizon t for a different rates r.
+interest.py - a small program to calculate the growth of an investment P over a given time horizon t.
+interests.py - a small program to calculate the growth of an investment P over a given time horizon t for different rates r.
 
 ### Files used
 
