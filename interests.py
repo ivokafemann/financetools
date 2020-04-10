@@ -12,8 +12,9 @@ Args:
 Returns:
     (int) Pt - Value of investment in the future after t years
 """
+
 P = int(input('\nHow much money would you like to invest?\n'))
-r = str(input('\nEnter any number of interest rates you would like to compare (seperated by space, only integers):\n'))
+r = str(input('\nEnter interest rates you would like to compare (seperated by space, only integers):\n'))
 t = int(input('\nWhat is the time horizon in years for the investment?\n'))
 
 rL = [int(i) for i in r.split()]
@@ -23,3 +24,14 @@ tL = list(range(t+1))
 def compound_interest(P,r,t):
     Pt = P * (1 + r/100)**t
     return Pt
+
+#Compound Interest List function:
+#Create a list containing n list(s) corresponding to the given interest rate,
+#displaying the growth of the principal sum over the given time horizon.
+def compound_interests_L(rL,P,tL):
+    PL = []
+    for r in rL:
+        PL.append([compound_interest(P,r,x) for x in tL])
+    return PL
+
+print('\nThe following graph plots the growth of the principal sum over the given time horizon t = {} year(s)'.format(t))
