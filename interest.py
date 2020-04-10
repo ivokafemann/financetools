@@ -32,7 +32,7 @@ print('\nThe following graph plots the growth of the principal sum over the give
 
 tL = list(range(t+1))
 
-#Plot the annuities over the time horizon T
+##Plot the growth of the principal sum over the time horizon t at the given rate r
 import matplotlib.pyplot as plt
 plt.plot(tL,compound_interests(P,r,t))
 plt.xlabel("t [y]")

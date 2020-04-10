@@ -1,5 +1,3 @@
-import matplotlib.pyplot as plt
-
 """
 A small tool to calculate the value of an investment at different interest rates in the future.
 
@@ -38,14 +36,15 @@ print('\nThe following graph plots the growth of the principal sum over the give
 
 PL = compound_interests_L(rL,P,tL)
 
-#Plot the annuities over the time horizon T
+#Plot the growth of the principal sum over the time horizon t at the given rates r in rL
+import matplotlib.pyplot as plt
 def compound_interest_plot(rL,P,t):
     data = compound_interests_L(rL,P,tL)
     for PL,r in zip(data,rL):
         label = "r = "+str(r)+"%"
         plt.plot(tL,PL,label=label)
-    plt.xlabel("t")
-    plt.ylabel("Pt")
+    plt.xlabel("t [years]")
+    plt.ylabel("Value [€]")
     plt.title("Compound Interest")
     plt.legend()
     plt.show()
