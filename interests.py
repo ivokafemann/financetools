@@ -35,3 +35,19 @@ def compound_interests_L(rL,P,tL):
     return PL
 
 print('\nThe following graph plots the growth of the principal sum over the given time horizon t = {} year(s)'.format(t))
+
+PL = compound_interests_L(rL,P,tL)
+
+#Plot the annuities over the time horizon T
+def compound_interest_plot(rL,P,t):
+    data = compound_interests_L(rL,P,tL)
+    for PL,r in zip(data,rL):
+        label = "r = "+str(r)+"%"
+        plt.plot(tL,PL,label=label)
+    plt.xlabel("t")
+    plt.ylabel("Pt")
+    plt.title("Compound Interest")
+    plt.legend()
+    plt.show()
+
+compound_interest_plot(rL,P,t)
