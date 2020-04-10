@@ -12,3 +12,10 @@ Args:
 Returns:
     (int) Pt - Value of investment in the future after t years
 """
+P = int(input('\nHow much money would you like to invest?\n'))
+r = str(input('\nEnter any number of interest rates you would like to compare (seperated by space, only integers):\n'))
+t = int(input('\nWhat is the time horizon in years for the investment?\n'))
+
+rL = [int(i) for i in r.split()]
+print(rL)
+tL = list(range(t+1))
