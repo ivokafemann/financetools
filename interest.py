@@ -8,29 +8,29 @@ Args:
     (int) r - interest rate
     (int) t - time in years
 Returns:
-    (int) P1 - Value of investment in the future
+    (int) Pt - Value of investment in the future after t years
 """
 
 P = int(input('\nHow much money would you like to invest?\n'))
 r = int(input('\nWhat is the interest rate (write only 5 for an interest rate 5 %) for the investment?\n'))
 t = int(input('\nWhat is the time horizon in years for the investment?\n'))
 
-#Annuity Function
+#Compound Interest Function
 def compound_interest(P,r,t):
-    P1 = P * (1 + r/100)**t
-    return P1
+    Pt = P * (1 + r/100)**t
+    return Pt
 
 print('\nThe value of your investment after {} year(s) at an interest rate of {}% is: {}'.format(t,r,compound_interest(P,r,t)))
 
-#Create a list of annuities with the Annuities Function
+#Create a list of compound interests for all moments of the time horizon with the compound_interest function
 def compound_interests(P,r,t):
-    P1 = [compound_interest(P,r,x) for x in range(t)]
-    return P1
+    PL = [compound_interest(P,r,x) for x in range(t)]
+    return PL
 
-print('\nThe annuity for each year is shown in the following list:\n',compound_interests(P,r,t))
-print('\nThe following graph plots the annuities over the given time horizon T\n')
+print('\nThe new principal sum at each year is shown in the following list:\n',compound_interests(P,r,t))
+print('\nThe following graph plots the growth of the principal sum over the given time horizon t = {} year(s)'.format(t))
 
-tL = list(range(t))
+tL = list(range(t+1))
 
 #Plot the annuities over the time horizon T
 import matplotlib.pyplot as plt
