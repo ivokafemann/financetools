@@ -12,7 +12,7 @@ Returns:
 """
 
 P = int(input('\nHow much money would you like to invest?\n'))
-r = str(input('\nEnter interest rates you would like to compare (seperated by space, only integers):\n'))
+r = str(input('\nEnter interest rates you would like to compare (seperated by spaces, only integer values):\n'))
 t = int(input('\nWhat is the time horizon in years for the investment?\n'))
 
 rL = [int(i) for i in r.split()]
