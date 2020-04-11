@@ -50,3 +50,15 @@ def compound_interest_plot(rL,P,t):
     plt.show()
 
 compound_interest_plot(rL,P,t)
+
+def benchmark(rL,P,t):
+    #First make benchmark rules
+    benchmark = [compound_interest(P,rL[0],x) for x in tL]
+    data = []
+    for r in rL:
+        PL = [compound_interest(P,r,x) for x in tL]
+        PL = [i/j-1 for i,j in zip(PL,benchmark)]
+        #Substract one so that we have the origin at 0 instead of 1
+        data.append(PL)
+    return data
+data = benchmark(rL,P,t)
