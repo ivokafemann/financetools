@@ -12,7 +12,7 @@ Returns:
 """
 
 P = int(input('\nHow much money would you like to invest?\n'))
-r = int(input('\nWhat is the interest rate (write only 5 for an interest rate 5 %) for the investment?\n'))
+r = int(input('\nEnter the interest rate (integer value only):\n'))
 t = int(input('\nWhat is the time horizon in years for the investment?\n'))
 
 #Compound Interest Function
